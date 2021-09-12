@@ -1,0 +1,403 @@
+@import  url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.btn_choose_sent input {
+    -webkit-appearance: none;
+    display: block;
+    margin: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+    background-color: hsla(0,0%,0%,.2);
+        background-image: -webkit-radial-gradient( #fff 0%, #fff 15%, #fff 28%, #fff 70% );
+    background-repeat: no-repeat;
+    -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+      -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+    outline: none;
+  }
+  .btn_choose_sent input:checked {
+    -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+      -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
+  }
+  .btn_choose_sent input:active {
+    -webkit-transform: scale(1.5);
+    -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
+  }
+  
+  
+  
+  /* The up/down direction logic */
+  
+  .btn_choose_sent input,
+  .btn_choose_sent input:active {
+    background-position: 0 24px;
+  }
+  .btn_choose_sent input:checked {
+    background-position: 0 0;
+  }
+  .btn_choose_sent input:checked ~ input,
+   .btn_choose_sent input:checked ~ input:active {
+    background-position: 0 -24px;
+  }
+  
+  .btn_choose_sent{
+          background: #EF2D56;
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(125, 147, 178, .3);
+      border: none; 
+       border-radius: 3px;
+      font-size: 16px;
+      line-height: 10px;
+      padding:  16px 20px 16px 38px;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 30px;
+      transition: all .3s;
+      height: auto;
+      cursor: pointer;
+      position: relative;
+      outline: none;
+  }
+  
+  .btn_choose_sent input{
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      top: 2px;
+  }
+  
+  .btn_choose_sent input:after{
+       position: absolute;
+      content: '';
+      width: 15rem;
+      left: 0;
+      right: 0;
+      /* background: red; */
+      /* z-index: -1; */
+      height: 40px;
+      top: -10px;
+  }
+  
+  .bg_btn_chose_1{
+      background-color: #f78968 !important;
+  }
+  
+  
+  .bg_btn_chose_2{
+      background-color: #4e336fdb !important;
+  }
+  
+  
+  .bg_btn_chose_3{
+      background-color: #359dcc !important;
+  }
+  
+  
+  /*-=p=--=*/
+  
+  
+  
+  
+  .btn_choose_sent_check_b{
+        background: #EF2D56;
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(125, 147, 178, .3);
+      border: none; 
+       border-radius: 3px;
+      font-size: 16px;
+      line-height: 10px;
+      padding:  16px 20px 16px 46px;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 30px;
+      transition: all .3s;
+      height: auto;
+      cursor: pointer;
+      position: relative;
+      outline: none;
+  }
+
+  body{
+      background-color: black;
+  }
+  
+  .buttons{
+      align-items: center;
+      padding-left: 40rem;
+  }
+
+  nav
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 319px;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+nav a
+{
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+}
+
+nav a:before, nav a:after
+{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+
+nav a:before
+{
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+}
+
+nav a:after
+{
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px
+}
+
+nav a:nth-child(1):before
+{
+    background-color: yellow;
+}
+
+nav a:nth-child(1):after
+{
+    background-color: red;
+}
+
+nav a:nth-child(2):before
+{
+    background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after
+{
+    background-color: #89ff00;
+}
+
+nav a:nth-child(3):before
+{
+    background-color: purple;
+}
+
+nav a:nth-child(3):after
+{
+    background-color: palevioletred;
+}
+
+#indicator
+{
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+
+nav a:hover
+{
+    color: #fff;
+}
+
+nav a:hover:before, nav a:hover:after
+{
+    transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator
+{
+    background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover ~ #indicator
+{
+    left: 34%;
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator
+{
+    left: 70%;
+    background: linear-gradient(130deg, purple, palevioletred);
+}
+
+#ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  z-index: 125;
+}
+.content{
+    max-width: 600px;
+    margin: auto;
+}
+.buttonsGender{
+    margin-left: 7rem;
+    margin-top: 5rem;
+}
+.buttonsActivity{
+    margin-top: 9rem;
+}
+
+
+audio{
+    bottom: 0; 
+    position: fixed; 
+    right: 0; 
+}
+
+footer{
+    color: white;
+    float: left;
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+  
+  .form__input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+      margin:  auto;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 75%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+  }
+  .form__group{
+      margin-top: 3rem;
+      margin-right: 5rem;
+  }
+  
+h2{
+    color: white;
+}
+
+.wrapper{
+    margin-top: 3rem;
+    margin-left: 15rem;
+  }
+  
+  .wrapper button{
+    font-family: 'Ubuntu', sans-serif;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 170px;
+    height: 40px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid #8C82FC;
+    background: #fff;
+    color: #8C82FC;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  
+  .wrapper button:hover{
+    background: #8C82FC;
+    color: #fff;
+  }
+  
+  .wrapper button span{
+    opacity: 1;
+    visibility: visible;
+    transition: all .35s;
+  }
+  
+  .success{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s;
+  }
+  
+  .success svg{
+    width: 20px;
+    height: 20px;
+    fill: yellowgreen;
+    transform-origin: 50% 50%;
+    transform: translateY(-50%) rotate(0deg) scale(0);
+    transition: all .35s;
+  }
+  
+  .wrapper button.is_active{
+    width: 40px;
+    height: 40px;
+  }
+  
+  .wrapper button.is_active .success{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .wrapper button.is_active .success svg{
+    margin-top: 50%;
+    transform: translateY(-50%) rotate(720deg) scale(1);
+  }
+  
+  .wrapper button.is_active span{
+    opacity: 0;
+    visibility: hidden;
+  }
